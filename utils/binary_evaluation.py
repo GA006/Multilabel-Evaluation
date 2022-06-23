@@ -15,20 +15,19 @@ class BinaryEvaluation():
         self.target_names = target_names
     
     
-    def evaluateCLF(self, y_pred): #!!!IMPLEMENTED!!!
+    def evaluateCLF(self, y_pred):
         """
         Given the true labels and the predicted ones,
         returns Accuracy, Cohen's Kappa and a report
         of Recall, Precision, F1, etc.
         """
-        print(f'     Accuracy: {round(accuracy_score(self.y_test, y_pred), 2)}') #IMPLEMENTED
-        print(f'Cohen\'s Kappa: {round(cohen_kappa_score(self.y_test, y_pred), 2)}') ##multiclass specific IMPLEMENTED
+        print(f'     Accuracy: {round(accuracy_score(self.y_test, y_pred), 2)}') 
+        print(f'Cohen\'s Kappa: {round(cohen_kappa_score(self.y_test, y_pred), 2)}') 
     
-        print(classification_report(self.y_test, y_pred,target_names=self.target_names)) #IMPLEMENTED
+        print(classification_report(self.y_test, y_pred,target_names=self.target_names)) 
     
-    
-    ##To be implemented##
-    def plotConfusionMatrix(self, y_pred): #!!!IMPLEMENTED!!!
+
+    def plotConfusionMatrix(self, y_pred): 
         """
         Given the true labels of the test set and 
         the predicted ones, plots a Confusion Matrix.
@@ -41,7 +40,3 @@ class BinaryEvaluation():
         plt.show()
         
         return conf_mat
-    ##-----------------------------------------------------------------------------------------------------------##
-
-            
-#I will also implement in the merged file, ROC Curve for the Binary case.
